@@ -12,7 +12,7 @@ source:
     - patch
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   entry_points:
     - slice2py=slice2py:main
