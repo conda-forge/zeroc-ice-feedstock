@@ -41,10 +41,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_openssl1.1.1python3.8.____73_pypy</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8905&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/zeroc-ice-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl1.1.1python3.8.____73_pypy" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_openssl1.1.1python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8905&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/zeroc-ice-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl1.1.1python3.8.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_openssl1.1.1python3.9.____73_pypy</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8905&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/zeroc-ice-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl1.1.1python3.9.____73_pypy" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -69,10 +83,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_64_openssl3python3.8.____73_pypy</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8905&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/zeroc-ice-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl3python3.8.____73_pypy" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_openssl3python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8905&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/zeroc-ice-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl3python3.8.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_openssl3python3.9.____73_pypy</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8905&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/zeroc-ice-feedstock?branchName=main&jobName=linux&configuration=linux_64_openssl3python3.9.____73_pypy" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -97,10 +125,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_64_openssl1.1.1python3.8.____73_pypy</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8905&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/zeroc-ice-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl1.1.1python3.8.____73_pypy" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64_openssl1.1.1python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8905&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/zeroc-ice-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl1.1.1python3.8.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_openssl1.1.1python3.9.____73_pypy</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8905&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/zeroc-ice-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl1.1.1python3.9.____73_pypy" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -125,10 +167,24 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_64_openssl3python3.8.____73_pypy</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8905&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/zeroc-ice-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl3python3.8.____73_pypy" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64_openssl3python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8905&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/zeroc-ice-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl3python3.8.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_openssl3python3.9.____73_pypy</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8905&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/zeroc-ice-feedstock?branchName=main&jobName=osx&configuration=osx_64_openssl3python3.9.____73_pypy" alt="variant">
                 </a>
               </td>
             </tr><tr>
