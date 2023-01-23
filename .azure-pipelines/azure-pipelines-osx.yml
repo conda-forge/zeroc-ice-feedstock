@@ -16,10 +16,18 @@ jobs:
         CONFIG: osx_64_openssl1.1.1python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_openssl1.1.1python3.11.____cpython
+      osx_64_openssl1.1.1python3.8.____73_pypy:
+        CONFIG: osx_64_openssl1.1.1python3.8.____73_pypy
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_openssl1.1.1python3.8.____73_pypy
       osx_64_openssl1.1.1python3.8.____cpython:
         CONFIG: osx_64_openssl1.1.1python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_openssl1.1.1python3.8.____cpython
+      osx_64_openssl1.1.1python3.9.____73_pypy:
+        CONFIG: osx_64_openssl1.1.1python3.9.____73_pypy
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_openssl1.1.1python3.9.____73_pypy
       osx_64_openssl1.1.1python3.9.____cpython:
         CONFIG: osx_64_openssl1.1.1python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -32,10 +40,18 @@ jobs:
         CONFIG: osx_64_openssl3python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_openssl3python3.11.____cpython
+      osx_64_openssl3python3.8.____73_pypy:
+        CONFIG: osx_64_openssl3python3.8.____73_pypy
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_openssl3python3.8.____73_pypy
       osx_64_openssl3python3.8.____cpython:
         CONFIG: osx_64_openssl3python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_openssl3python3.8.____cpython
+      osx_64_openssl3python3.9.____73_pypy:
+        CONFIG: osx_64_openssl3python3.9.____73_pypy
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_openssl3python3.9.____73_pypy
       osx_64_openssl3python3.9.____cpython:
         CONFIG: osx_64_openssl3python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
