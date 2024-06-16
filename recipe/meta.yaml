@@ -16,8 +16,8 @@ source:
     # https://github.com/glencoesoftware/zeroc-ice-py-patches/blob/ba13c76d5a6ccc4d88ea68b58c1fa86bab0da7e8/0003-python-312-support.patch
     - 0003-python-312-support.patch
     # https://github.com/glencoesoftware/zeroc-ice-py-patches/blob/ba13c76d5a6ccc4d88ea68b58c1fa86bab0da7e8/0004-visual-studio-2022-support.patch
-    # Additional fixes for Proxy.h
-    - 0004-cpp17-support.patch
+    # Ignore the patch name, it's also required for building on OSX
+    - 0004-visual-studio-2022-support.patch
 
 build:
   number: 5

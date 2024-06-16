@@ -1,0 +1,58 @@
+diff -Naur zeroc-ice-3.6.5.orig/src/ice/cpp/include/IceUtil/Config.h zeroc-ice-3.6.5/src/ice/cpp/include/IceUtil/Config.h
+--- zeroc-ice-3.6.5.orig/src/ice/cpp/include/IceUtil/Config.h	2019-07-31 19:49:28.000000000 +0000
++++ zeroc-ice-3.6.5/src/ice/cpp/include/IceUtil/Config.h	2024-03-25 12:26:23.572653542 +0000
+@@ -141,6 +141,12 @@
+ #   define ICE_HAS_THREAD_SAFE_LOCAL_STATIC
+ #endif
+ 
++#if defined(_MSVC_LANG)
++#   define ICE_CPLUSPLUS _MSVC_LANG
++#else
++#   define ICE_CPLUSPLUS __cplusplus
++#endif
++
+ //
+ // Compiler extensions to export and import symbols: see the documentation
+ // for Visual Studio, Solaris Studio and GCC.
+diff -Naur zeroc-ice-3.6.5.orig/src/ice/cpp/include/IceUtil/Timer.h zeroc-ice-3.6.5/src/ice/cpp/include/IceUtil/Timer.h
+--- zeroc-ice-3.6.5.orig/src/ice/cpp/include/IceUtil/Timer.h	2019-07-31 19:49:28.000000000 +0000
++++ zeroc-ice-3.6.5/src/ice/cpp/include/IceUtil/Timer.h	2024-03-25 13:13:12.236244231 +0000
+@@ -102,7 +102,11 @@
+     bool _destroyed;
+     std::set<Token> _tokens;
+     
++#if (ICE_CPLUSPLUS >= 201402L)
++    class TimerTaskCompare
++#else
+     class TimerTaskCompare : public std::binary_function<TimerTaskPtr, TimerTaskPtr, bool>
++#endif
+     {
+     public:
+         
+diff -Naur zeroc-ice-3.6.5.orig/src/ice/cpp/include/Slice/Parser.h zeroc-ice-3.6.5/src/ice/cpp/include/Slice/Parser.h
+--- zeroc-ice-3.6.5.orig/src/ice/cpp/include/Slice/Parser.h	2019-07-31 19:49:28.000000000 +0000
++++ zeroc-ice-3.6.5/src/ice/cpp/include/Slice/Parser.h	2024-03-25 12:50:22.526982227 +0000
+@@ -189,7 +189,11 @@
+ // CICompare -- function object to do case-insensitive string comparison.
+ // ----------------------------------------------------------------------
+ 
++#if (ICE_CPLUSPLUS >= 201402L)
++class SLICE_API CICompare
++#else
+ class SLICE_API CICompare : public std::binary_function<std::string, std::string, bool>
++#endif
+ {
+ public:
+ 
+@@ -205,7 +209,11 @@
+ // most-derived to least-derived order.
+ // ----------------------------------------------------------------------
+ 
++#if (ICE_CPLUSPLUS >= 201402L)
++class SLICE_API DerivedToBaseCompare
++#else
+ class SLICE_API DerivedToBaseCompare : public std::binary_function<std::string, std::string, bool>
++#endif
+ {
+ public:
+ 
