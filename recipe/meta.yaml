@@ -50,6 +50,7 @@ test:
     - IceGrid
     - IceMX
     - IcePatch2
+    - IcePy
     - IceStorm
   commands:
     - slice2py --help
@@ -58,7 +59,7 @@ about:
   home: "https://zeroc.com"
   license: GPL-2.0-only
   license_family: GPL2
-  license_file: 
+  license_file:
     - ICE_LICENSE
   summary: "Ice is a comprehensive RPC framework with support for Python, C++, .NET, Java, JavaScript and more."
 
