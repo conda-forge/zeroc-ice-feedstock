@@ -1,0 +1,21 @@
+diff -ur zeroc-ice-3.6.5.orig/lib/Ice.py zeroc-ice-3.6.5/lib/Ice.py
+--- zeroc-ice-3.6.5.orig/lib/Ice.py	2019-07-31 20:49:38
++++ zeroc-ice-3.6.5/lib/Ice.py	2024-01-11 11:11:59
+@@ -11,7 +11,7 @@
+ Ice module
+ """
+ 
+-import sys, string, imp, os, threading, warnings, datetime
++import sys, string, os, threading, warnings, datetime, types
+ 
+ #
+ # RTTI problems can occur in C++ code unless we modify Python's dlopen flags.
+@@ -373,7 +373,7 @@
+         elif curr in _pendingModules:
+             mod = _pendingModules[curr]
+         else:
+-            nmod = imp.new_module(curr)
++            nmod = types.ModuleType(curr)
+             _pendingModules[curr] = nmod
+             mod = nmod
+ 
