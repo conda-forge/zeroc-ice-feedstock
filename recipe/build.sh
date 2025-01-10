@@ -9,4 +9,7 @@ if [ "$OSX_ARCH" = arm64 ]; then
   # https://travis-ci.community/t/osx-image-xcode12-2-does-not-come-with-macos-11-sdk-no-way-to-compile-for-arm/10611
   export EXTRA_COMPILE_ARGS="-target arm64-apple-macos11"
 fi
+if [[ "$target_platform" == osx-* ]]; then
+  export CXXFLAGS="${CXXFLAGS} -std=c++14"
+fi
 $PYTHON -m pip install . --ignore-installed --no-deps -vv

@@ -16,8 +16,6 @@ build:
   number: 5
   entry_points:
     - slice2py=slice2py:main
-  script:
-    - CXXFLAGS="${CXXFLAGS} -std=c++14"  # [osx]    
   skip: True  # [not osx]
 
 requirements:
