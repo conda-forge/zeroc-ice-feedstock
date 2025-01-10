@@ -6,7 +6,7 @@ c_stdlib_version:          # [osx]
   - 11.0                   # [osx and arm64]
 
 cxx_compiler_version:
-  - 14                     # [osx]
+  - 13                     # [osx]
 
 c_compiler_version:
-  - 14                     # [osx]
+  - 13                     # [osx]

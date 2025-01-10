@@ -16,7 +16,7 @@ build:
   number: 5
   entry_points:
     - slice2py=slice2py:main
-  skip: True  # [py>310]
+  skip: True  # [py>310 and not osx]
 
 requirements:
   build:
