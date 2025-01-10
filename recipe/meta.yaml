@@ -13,7 +13,7 @@ source:
     - osx.patch  # [osx]
 
 build:
-  number: 4
+  number: 5
   entry_points:
     - slice2py=slice2py:main
 
