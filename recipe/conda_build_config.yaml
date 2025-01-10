@@ -5,8 +5,8 @@ c_stdlib_version:          # [osx]
   - 10.13                  # [osx and not arm64]
   - 11.0                   # [osx and arm64]
 
-cxx_compiler_version:      # [osx]
-  - 16
+cxx_compiler_version:
+  - 16                     # [osx]
 
-c_compiler_version:        # [osx]
-  - 16
+c_compiler_version:
+  - 16                     # [osx]
