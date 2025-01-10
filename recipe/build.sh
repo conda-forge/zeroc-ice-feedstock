@@ -10,7 +10,7 @@ if [ "$OSX_ARCH" = arm64 ]; then
   export EXTRA_COMPILE_ARGS="-target arm64-apple-macos11"
 fi
 if [[ "$target_platform" == osx-* ]]; then
-  export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION"
+  export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION -D_LIBCPP_ENABLE_CXX17_REMOVED_BINDERS"
   export CFLAGS="${CFLAGS} -D_POSIX_C_SOURCE=200809L"
 fi
 $PYTHON -m pip install . --ignore-installed --no-deps -vv
