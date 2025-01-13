@@ -1,6 +1,0 @@
-# https://conda-forge.org/docs/maintainer/knowledge_base.html#requiring-newer-macos-sdks
-
-# Ice 3.6.5 includes TLS 1.3 support which requires a more recent SecureTransport than the default 10.9 SDK
-MACOSX_DEPLOYMENT_TARGET:  # [osx]
-  - 10.13                  # [osx and not arm64]
-  - 11.0                   # [osx and arm64]
