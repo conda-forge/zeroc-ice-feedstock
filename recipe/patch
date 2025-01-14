@@ -1,11 +1,58 @@
---- a/setup.py
-+++ b/setup.py
-@@ -107,7 +107,7 @@ else:
+diff --color -Nur zeroc-ice-3.6.5.orig/setup.py zeroc-ice-3.6.5/setup.py
+--- zeroc-ice-3.6.5.orig/setup.py	2019-07-31 20:49:38.000000000 +0100
++++ zeroc-ice-3.6.5/setup.py	2025-01-14 00:05:26.459462218 +0000
+@@ -38,7 +38,7 @@
+         packages.append(f)
+ package_data = { 'slice' : ['*/*.ice'] }
+ 
+-extra_compile_args=[]
++extra_compile_args = os.getenv("EXTRA_COMPILE_ARGS", "").split()
+ if use_ice:
+     include_dirs=['src']
+     define_macros=[]
+@@ -107,7 +107,7 @@
      if use_ice:
          libraries = ["IceSSL", "Ice", "Slice", "IceUtil"]
      else:
 -        libraries=['ssl', 'crypto', 'bz2', 'rt']
-+        libraries=['ssl', 'crypto', 'bz2', 'rt', 'iconv']
++        libraries=['ssl', 'crypto', 'bz2', 'rt', 'iconv', 'pthread']
          if platform is not 'freebsd':
              libraries.append('dl')
+ 
+diff --color -Nur zeroc-ice-3.6.5.orig/src/ice/cpp/include/IceSSL/Plugin.h zeroc-ice-3.6.5/src/ice/cpp/include/IceSSL/Plugin.h
+--- zeroc-ice-3.6.5.orig/src/ice/cpp/include/IceSSL/Plugin.h	2019-07-31 20:49:28.000000000 +0100
++++ zeroc-ice-3.6.5/src/ice/cpp/include/IceSSL/Plugin.h	2025-01-14 00:00:45.908135427 +0000
+@@ -20,6 +20,9 @@
+ 
+ #if defined(ICE_USE_SECURE_TRANSPORT)
+ #   include <CoreFoundation/CFError.h>
++#   if __MAC_OS_X_VERSION_MAX_ALLOWED >= 101500
++#       include <Security/Security.h>
++#   endif
+ #elif defined(ICE_USE_SCHANNEL)
+ #   include <wincrypt.h>
+ #endif
+@@ -64,14 +67,23 @@
+ //
+ // Pointer to an opaque certificate object.
+ //
++#   if __MAC_OS_X_VERSION_MAX_ALLOWED >= 101500
++typedef OpaqueSecCertificateRef* X509CertificateRef;
++#   else
+ struct OpaqueSecCertificateRef;
+ typedef struct OpaqueSecCertificateRef* X509CertificateRef;
++#   endif
+ 
+ //
+ // Pointer to an opaque key object.
+ //
++#   if __MAC_OS_X_VERSION_MAX_ALLOWED >= 101500
++typedef OpaqueSecKeyRef* KeyRef;
++#   else
+ struct OpaqueSecKeyRef;
+ typedef struct OpaqueSecKeyRef* KeyRef;
++#   endif
++
+ 
+ #elif defined(ICE_USE_SCHANNEL)
  

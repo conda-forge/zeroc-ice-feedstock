@@ -9,8 +9,7 @@ source:
   url: "https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
   sha256: 4235ffeb605bcd4e22e716577f7d61e4aa1bc82f65276bb542701a81b7933356
   patches:
-    - patch  # [linux]
-    - osx.patch  # [osx]
+    - patch  # [not win]
     # https://github.com/glencoesoftware/zeroc-ice-py-patches/blob/ba13c76d5a6ccc4d88ea68b58c1fa86bab0da7e8/0002-python-311-support.patch
     - 0002-python-311-support.patch
     # https://github.com/glencoesoftware/zeroc-ice-py-patches/blob/ba13c76d5a6ccc4d88ea68b58c1fa86bab0da7e8/0003-python-312-support.patch
