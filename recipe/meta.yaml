@@ -30,6 +30,7 @@ requirements:
     - bzip2
     - openssl
     - libiconv
+    - setuptools
   run:
     - python
     - bzip2
