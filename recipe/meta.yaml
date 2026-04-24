@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: b063aafda360df711f76945529bb541576f266be41e5d5a2dd77f5d320c18664
   patches:
     - patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   entry_points:
     - slice2py=slice2py:main
@@ -30,6 +30,7 @@ requirements:
     - bzip2
     - openssl
     - libiconv
+    - setuptools
   run:
     - python
     - bzip2
