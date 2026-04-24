@@ -1,13 +1,13 @@
 {% set name = "zeroc-ice" %}
-{% set version = "3.7.10.1" %}
+{% set version = "3.8.0.post1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: b063aafda360df711f76945529bb541576f266be41e5d5a2dd77f5d320c18664
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 4b047fe01487ffcf9c61654a03b684ddb9c538be767d6cf29c57a166be550bd7
   patches:
     - patch
 
