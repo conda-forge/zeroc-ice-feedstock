@@ -1,11 +1,8 @@
---- zeroc-ice-3.7.7.orig/setup.py	2022-01-18 17:02:37.000000000 +0000
-+++ zeroc-ice-3.7.7/setup.py	2022-04-03 15:42:17.481271173 +0100
-@@ -108,7 +108,7 @@
-     if use_ice:
-         libraries = ["IceSSL", "IceLocatorDiscovery", "IceDiscovery", "Ice"]
-     else:
--        libraries=['ssl', 'crypto', 'bz2', 'rt']
-+        libraries=['ssl', 'crypto', 'bz2', 'rt', 'iconv']
-         if platform != 'freebsd':
-             libraries.append('dl')
- 
+--- a/setup.py
++++ b/setup.py
+@@ -1,4 +1,4 @@
+     extra_link_args = []
+-    libraries = ["ssl", "crypto", "bz2", "rt"]
++    libraries = ["ssl", "crypto", "bz2", "rt", "iconv"]
+     if not sys.platform.startswith("freebsd"):
+         libraries.append("dl")
